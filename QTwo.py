@@ -14,3 +14,15 @@ class Player(pygame.sprite.Sprite):
         self.jump_power = -10
         self.health = 100
         self.lives = 3
+
+   def update(self):
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT]:
+            self.rect.x -= self.speed
+        if keys[pygame.K_RIGHT]:
+            self.rect.x += self.speed
+        if keys[pygame.K_SPACE]:
+            self.jump()
+    
+    def jump(self):
+        self.rect.y += self.jump_power
