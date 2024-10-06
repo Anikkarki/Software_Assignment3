@@ -7,9 +7,6 @@ import os
 import threading
 import queue
 
-# Import EfficientNetB0 and its preprocessing functions
-from tensorflow.keras.applications.efficientnet import EfficientNetB0, preprocess_input, decode_predictions
-
 # Multiple decorators to check for file existence and supported image formats
 def file_exists(func):
     def wrapper(*args, **kwargs):
